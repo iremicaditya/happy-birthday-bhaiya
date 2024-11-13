@@ -1,0 +1,151 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #008888;
+}
+
+.container {
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  padding: 20px;
+}
+
+/* Heading */
+h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Wish Box */
+.wish-box {
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+  height: 250px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.2em;
+  color: #555;
+  background-color: #fafafa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Wish Card */
+.wish-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.wish-content h3 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.blue-tick {
+  color: #1da1f2;
+  font-size: 0.9em;
+  margin-left: 5px;
+}
+
+.wish-content p {
+  margin: 5px 0 0;
+  font-size: 1em;
+  color: #555;
+}
+
+/* Button Styling */
+.view-wishes-btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: rgba(40, 40, 170, 0.394);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.view-wishes-btn:hover {
+  background-color: blue;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wish-box {
+    height: auto;
+    padding: 15px;
+  }
+
+  .profile-pic {
+    width: 45px;
+    height: 45px;
+  }
+
+  .wish-content h3 {
+    font-size: 1em;
+  }
+
+  .wish-content p {
+    font-size: 0.9em;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .view-wishes-btn {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6em;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+  }
+
+  .wish-content h3 {
+    font-size: 0.9em;
+  }
+
+  .wish-content p {
+    font-size: 0.85em;
+  }
+}

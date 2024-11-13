@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wishes</title>
+    <link rel="stylesheet" href="wishes.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Happy Birthday Brother!</h1>
+      <div class="wish-box" id="wishBox">
+        <!-- Wishes will appear here -->
+      </div>
+      <button class="view-wishes-btn" onclick="showWishes()">
+        View Wishes
+      </button>
+    </div>
+
+    <script>
+      // Array of 20 wishes with user details
+      const wishes = [
+        {
+          name: "Aiden",
+          profilePic: "img/1.jpg",
+          text: "Happy Birthday Bhaiya! Wishing you a wonderful year ahead!",
+        },
+        {
+          name: "jethalal",
+          profilePic: "img/2.jpeg",
+          text: "May all your dreams come true! Have a fantastic day!",
+        },
+        {
+          name: "champaklal",
+          profilePic: "img/3.jpeg",
+          text: "To the best brother ever, happy birthday!",
+        },
+        {
+          name: "popatlal",
+          profilePic: "img/4.jpeg",
+          text: "Wishing you endless joy and success. Enjoy your special day!",
+        },
+        {
+          name: "Dr. haathi",
+          profilePic: "img/5.jpeg",
+          text: "Hope you have a birthday filled with laughter and fun!",
+        },
+        {
+          name: "Bhide",
+          profilePic: "img/6.jpeg",
+          text: "Happy Birthday! May this year bring you peace and happiness.",
+        },
+        {
+          name: "Raushan",
+          profilePic: "img/7.jpeg",
+          text: "Cheers to you and all the amazing things you do!",
+        },
+        {
+          name: "Garib Chai Wala",
+          profilePic: "img/8.jpeg",
+          text: "Have a birthday that's as fantastic as you are!",
+        },
+        {
+          name: "Garib Vadapaw waali",
+          profilePic: "img/9.jpeg",
+          text: "Many happy returns of the day, Bhaiya!",
+        },
+        {
+          name: "punit roadstar",
+          profilePic: "img/10.jpeg",
+          text: "Hope your birthday is as wonderful as you are!",
+        },
+        {
+          name: "thara bhen Joginder",
+          profilePic: "img/11.jpeg",
+          text: "Have a rocking birthday, brother!",
+        },
+        {
+          name: "Sharam karo Bhosdiwalo",
+          profilePic: "img/12.jpeg",
+          text: "Happy Birthday to an incredible brother!",
+        },
+        {
+          name: "Mr. Beast",
+          profilePic: "img/13.jpeg",
+          text: "May this day bring you endless joy!",
+        },
+        {
+          name: "lawrence bishnoi",
+          profilePic: "img/14.jpeg",
+          text: "ki haal chal chote Happy Birthday",
+        },
+      ];
+
+      // Function to show wishes one by one
+      let wishIndex = 0;
+      function showWishes() {
+        const wishBox = document.getElementById("wishBox");
+        if (wishIndex < wishes.length) {
+          const wish = wishes[wishIndex];
+          wishBox.innerHTML = `
+                    <div class="wish-card">
+                        <img src="${wish.profilePic}" alt="${wish.name}" class="profile-pic">
+                        <div class="wish-content">
+                            <h3>${wish.name} <span class="blue-tick">✔</span></h3>
+                            <p>${wish.text}</p>
+                        </div>
+                    </div>
+                `;
+          wishIndex++;
+        } else {
+          wishBox.innerHTML = "<p>No more wishes to show.</p>";
+        }
+      }
+    </script>
+  </body>
+</html>
